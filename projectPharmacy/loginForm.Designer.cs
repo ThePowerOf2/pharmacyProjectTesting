@@ -32,6 +32,8 @@
             this.loginPassword = new System.Windows.Forms.TextBox();
             this.loginUsername = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.usernameLabel = new System.Windows.Forms.Label();
+            this.passwordLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitButton
@@ -46,11 +48,12 @@
             // 
             // loginPassword
             // 
+            this.loginPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.loginPassword.Location = new System.Drawing.Point(263, 179);
             this.loginPassword.Name = "loginPassword";
+            this.loginPassword.PasswordChar = '•';
             this.loginPassword.Size = new System.Drawing.Size(100, 20);
             this.loginPassword.TabIndex = 1;
-            this.loginPassword.TextChanged += new System.EventHandler(this.loginPassword_TextChanged);
             // 
             // loginUsername
             // 
@@ -69,19 +72,39 @@
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // Form1
+            // usernameLabel
+            // 
+            this.usernameLabel.AutoSize = true;
+            this.usernameLabel.Location = new System.Drawing.Point(199, 147);
+            this.usernameLabel.Name = "usernameLabel";
+            this.usernameLabel.Size = new System.Drawing.Size(58, 13);
+            this.usernameLabel.TabIndex = 4;
+            this.usernameLabel.Text = "Username:";
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(199, 182);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(56, 13);
+            this.passwordLabel.TabIndex = 5;
+            this.passwordLabel.Text = "Password:";
+            // 
+            // loginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::projectPharmacy.Properties.Resources.Pharmacy_Green_Cross_svg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(624, 321);
+            this.Controls.Add(this.passwordLabel);
+            this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.loginUsername);
             this.Controls.Add(this.loginPassword);
             this.Controls.Add(this.exitButton);
             this.DoubleBuffered = true;
-            this.Name = "Form1";
+            this.Name = "loginForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -94,6 +117,8 @@
         private System.Windows.Forms.TextBox loginPassword;
         private System.Windows.Forms.TextBox loginUsername;
         private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.Label usernameLabel;
+        private System.Windows.Forms.Label passwordLabel;
     }
 }
 
